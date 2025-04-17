@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <style>
+        body { background-color: rgb(42, 42, 42); }
+        p1 { color: white }
+        button { color: black}
+        p2 { color: white;}
+        p3 { color: white;}
+        p4 { color: white;}
+
+    </style>
+   <br><br><br><br><br><br><br><br><br>
+   <p1>
+    <center>simple calculator.</center><br><br><br>
+   </p1>
+   
+   <script>
+    function add() {
+        var num1, num2;
+        num1 = Number(document.form1.txtNum1.value);
+        num2 = Number(document.form1.txtNum2.value);
+        document.form1.txtSum.value= num1 + num2;}
+    function subtract() {
+        var num1, num2;
+        num1 = Number(document.form1.txtNum1.value);
+        num2 = Number(document.form1.txtNum2.value);
+        document.form1.txtSum.value = num1 - num2; }
+    function multiply() {
+        var num1, num2;
+        num1 = Number(document.form1.txtNum1.value);
+        num2 = Number(document.form1.txtNum2.value);
+        document.form1.txtSum.value = num1 * num2; }
+    function divide() {
+        var num1, num2;
+        num1 = Number(document.form1.txtNum1.value);
+        num2 = Number(document.form1.txtNum2.value); 
+        if (num2 === 0) {
+            document.form1.txtSum.value = "Error";
+        } else {
+            document.form1.txtSum.value = num1 / num2; } 
+    }
+    </script>
+   <form name="form1">
+<center>
+   <p2>enter operand 1:</p2>
+   <input type="text" name="txtNum1" size=8><br><br>
+   <p3>enter operand 2:</p3>
+   <input type="text" name="txtNum2" size=8><br><br>
+   <input type="button" value ="+" onclick="add()">
+   <input type="button" value ="-" onclick="subtract()">
+   <input type="button" value ="×" onclick="multiply()">
+   <input type="button" value ="/" onclick="divide()">
+   <p4><br><br>result:<br><br></p4>
+   <input type="text" name="txtSum" size="8" readonly>
+</center>
+</form>   
+</body>
+</html>
